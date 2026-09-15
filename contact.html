@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico" sizes="any">
+<title>Contact — Harrington Data Co</title>
+<meta name="description" content="Tell Harrington Data Co where your team is stuck. We reply within two business days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand">Harrington <span>Data Co</span></a>
+  <a href="index.html" class="nav-link">Home</a>
+  <div class="nav-dropdown">
+    <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-services-menu">
+      Services
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+    </button>
+    <div id="nav-services-menu" class="nav-menu" hidden>
+      <a href="data-services.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+        <span>
+          <span class="item-title">Data services</span>
+          <span class="item-desc">Engineering, reporting, analytics</span>
+        </span>
+      </a>
+      <a href="ai-services.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+        <span>
+          <span class="item-title">AI services</span>
+          <span class="item-desc">Train, strategize, build</span>
+        </span>
+      </a>
+    </div>
+  </div>
+  <a href="faq.html" class="nav-link">FAQ</a>
+  <a href="contact.html" class="nav-cta">Get in touch</a>
+</nav>
+
+<main class="wrap">
+
+  <section class="section-hero-tight contact-grid">
+    <div class="contact-side">
+      <span class="eyebrow" style="margin-bottom:16px;">Contact</span>
+      <h1 class="display-sm" style="margin:0 0 20px;">Tell us where you're stuck</h1>
+      <p class="lede">Tell us which side you're here about and we'll only ask what's relevant. We reply within two business days — usually with a short call to scope things properly.</p>
+      <div class="direct-card">
+        <span class="label">Or write directly</span>
+        <a href="mailto:hello@harringtondata.com">hello@harringtondata.com</a>
+      </div>
+    </div>
+
+    <div id="contact-confirm" class="confirm-card" hidden>
+      <span class="badge-pill badge-pill-sm" style="margin-bottom:18px;">Received</span>
+      <h2>Got it, thanks</h2>
+      <p>We'll be in touch within two business days.</p>
+    </div>
+
+    <form id="contact-form" class="contact-form">
+
+      <div class="field-grid">
+        <div class="field">
+          <label for="f-fname">First name</label>
+          <input id="f-fname" type="text" data-hs-prop="firstname" required>
+        </div>
+        <div class="field">
+          <label for="f-lname">Last name</label>
+          <input id="f-lname" type="text" data-hs-prop="lastname" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" type="email" data-hs-prop="email" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" type="tel" data-hs-prop="phone">
+        </div>
+        <div class="field">
+          <label for="f-size">Company size</label>
+          <select id="f-size" data-hs-prop="numemployees">
+            <option value="1-5">1–5 employees</option>
+            <option value="5-25">5–25 employees</option>
+            <option value="25-50">25–50 employees</option>
+            <option value="50-100">50–100 employees</option>
+            <option value="100-500">100–500 employees</option>
+            <option value="500-1000">500–1000 employees</option>
+            <option value="1000+">1000+ employees</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="interest-block">
+        <label class="label">Which side are you here about?</label>
+        <p class="hint">Pick one. The rest of the form follows from it.</p>
+        <div class="interest-options">
+          <button type="button" class="interest-btn practice-btn" data-practice="Data">Data</button>
+          <button type="button" class="interest-btn practice-btn" data-practice="AI">AI</button>
+          <button type="button" class="interest-btn practice-btn" data-practice="Both">Both</button>
+          <button type="button" class="interest-btn practice-btn" data-practice="Not sure yet">Not sure yet</button>
+        </div>
+      </div>
+
+      <div id="panel-data" class="conditional-panel" hidden>
+        <div class="span-all">
+          <label style="font-size:11.5px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--color-navy); display:block; margin-bottom:10px;">Which data work sounds like yours?</label>
+          <div class="interest-options">
+            <button type="button" class="interest-btn data-btn" data-data="Data engineering">Data engineering</button>
+            <button type="button" class="interest-btn data-btn" data-data="Reporting & dashboards">Reporting &amp; dashboards</button>
+            <button type="button" class="interest-btn data-btn" data-data="Advanced analytics">Advanced analytics</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="da-reporting">What do you report in today?</label>
+          <select id="da-reporting">
+            <option>Excel or Google Sheets</option>
+            <option>Power BI</option>
+            <option>Tableau</option>
+            <option>Looker Studio</option>
+            <option>Something built in-house</option>
+            <option>Nothing formal yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="da-systems-count">How many systems hold the data?</label>
+          <select id="da-systems-count">
+            <option>1–2</option>
+            <option>3–5</option>
+            <option>6 or more</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="da-maintainer">Who maintains reporting now?</label>
+          <select id="da-maintainer">
+            <option>One person, alongside their real job</option>
+            <option>A small analytics team</option>
+            <option>An outside firm</option>
+            <option>Nobody, really</option>
+          </select>
+        </div>
+        <div class="field span-all">
+          <label for="da-systems">Which systems would we need to pull from?</label>
+          <input id="da-systems" type="text" placeholder="e.g. QuickBooks, HubSpot, our scheduling tool, a shared drive">
+        </div>
+      </div>
+
+      <div id="ai-interest-block" class="interest-block" hidden>
+        <label class="label">On the AI side, what are you after?</label>
+        <p class="hint">Pick as many as apply.</p>
+        <div class="interest-options">
+          <button type="button" class="interest-btn ai-btn" data-label="Train">Train</button>
+          <button type="button" class="interest-btn ai-btn" data-label="Strategize">Strategize</button>
+          <button type="button" class="interest-btn ai-btn" data-label="Build">Build</button>
+        </div>
+      </div>
+
+      <div id="panel-train" class="conditional-panel" hidden>
+        <div class="panel-title">A few things about your team</div>
+        <div class="field">
+          <label for="tr-count">How many people need training?</label>
+          <select id="tr-count">
+            <option>Under 10</option>
+            <option>10–25</option>
+            <option>26–50</option>
+            <option>More than 50</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="tr-format">Preferred format</label>
+          <select id="tr-format">
+            <option>On-site</option>
+            <option>Remote</option>
+            <option>Either works</option>
+          </select>
+        </div>
+        <div class="span-all">
+          <label style="font-size:11.5px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--color-navy); display:block; margin-bottom:10px;">Which tools is your team using today?</label>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div class="checkbox-row">
+              <label class="checkbox-pill"><input type="checkbox">Claude</label>
+              <label class="checkbox-pill"><input type="checkbox">ChatGPT</label>
+              <label class="checkbox-pill"><input type="checkbox">Microsoft Copilot</label>
+              <label class="checkbox-pill"><input type="checkbox">Gemini</label>
+              <label class="checkbox-pill"><input type="checkbox" id="tr-tool-other-check">Other</label>
+              <label class="checkbox-pill"><input type="checkbox">None yet</label>
+            </div>
+            <input id="tr-tool-other-text" type="text" data-inline-detail placeholder="Which tool?" style="font-size:15.5px; color:var(--color-text); background:var(--color-bg-soft); border:1px solid var(--line-6); border-radius:var(--radius); padding:11px 13px;" hidden>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel-strategize" class="conditional-panel" hidden>
+        <div class="panel-title">A few things about the decision</div>
+        <div class="field">
+          <label for="st-prompt">What's prompting this?</label>
+          <select id="st-prompt">
+            <option>Leadership is asking about it</option>
+            <option>Teams are already using tools ad hoc</option>
+            <option>A specific project or deadline</option>
+            <option>A client or regulatory requirement</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="st-room">Who needs to be in the room?</label>
+          <select id="st-room">
+            <option>Owner or founder</option>
+            <option>Leadership team</option>
+            <option>Department heads</option>
+            <option>Not decided</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="panel-build" class="conditional-panel" hidden>
+        <div class="panel-title">A few things about your systems</div>
+        <div class="field">
+          <label for="bu-kind">What kind of build?</label>
+          <select id="bu-kind">
+            <option>An agent that handles a task</option>
+            <option>A knowledge base the team can ask</option>
+            <option>Both</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field" data-build-kind="agent">
+          <label for="bu-count">How many workflows are you thinking about?</label>
+          <select id="bu-count">
+            <option>1–3</option>
+            <option>4–8</option>
+            <option>9 or more</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field" data-build-kind="agent">
+          <label for="bu-doc">Is the process documented today?</label>
+          <select id="bu-doc">
+            <option>Yes, mostly written down</option>
+            <option>Partly</option>
+            <option>No — it lives in people's heads</option>
+          </select>
+        </div>
+        <div class="field" data-build-kind="kb" hidden>
+          <label for="bu-kb-scale">Roughly how much material would need to go in?</label>
+          <select id="bu-kb-scale">
+            <option>A handful of documents</option>
+            <option>A shared drive or wiki's worth</option>
+            <option>Several systems worth</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field" data-build-kind="kb" hidden>
+          <label for="bu-kb-location">Where does this material live today?</label>
+          <input id="bu-kb-location" type="text" placeholder="e.g. Google Drive, SharePoint, Notion, email threads">
+        </div>
+        <div class="field span-all">
+          <label for="bu-systems">Which systems would this need to touch?</label>
+          <input id="bu-systems" type="text" placeholder="e.g. QuickBooks, HubSpot, our scheduling tool, shared drive">
+        </div>
+      </div>
+
+      <div id="panel-unsure" class="conditional-panel" hidden style="display:flex; flex-direction:column; gap:12px;">
+        <div class="panel-title" style="grid-column:auto;">That's a fine place to start</div>
+        <p class="sub" style="margin:0;">Plenty of people can't tell whether their problem is the data or the AI. Working that out is the first call.</p>
+        <div class="field field-solo">
+          <label for="un-outcome" style="font-size:11.5px; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--color-navy);">What would a good outcome look like six months from now?</label>
+          <textarea id="un-outcome" rows="3" style="font-size:15.5px; color:var(--color-text); background:var(--color-surface); border:1px solid var(--line-6); border-radius:var(--radius); padding:11px 13px; resize:vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="field-grid">
+        <div class="field">
+          <label for="f-budget">Budget range</label>
+          <select id="f-budget" data-hs-prop="budget_range">
+            <option value="under_10k">Under $10,000</option>
+            <option value="10k_to_50k">$10,000–$50,000</option>
+            <option value="50k_to_100k">$50,000–$100,000</option>
+            <option value="over_100k">Over $100,000</option>
+            <option value="">Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-source">How did you hear about us?</label>
+          <select id="f-source" data-hs-prop="lead_source">
+            <option value="Word of Mouth">Word of mouth</option>
+            <option value="Referral">Referral</option>
+            <option value="Website">Website</option>
+            <option value="Existing Client">Existing client</option>
+            <option value="Event / Networking">Event or networking</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field field-solo">
+        <label id="message-label" for="f-message">Anything else we should know?</label>
+        <textarea id="f-message" rows="8"></textarea>
+      </div>
+
+      <p id="contact-error" class="sub" style="color:#B3261E; font-size:14px;" hidden>Something went wrong sending that — please try again, or email us directly at hello@harringtondata.com.</p>
+
+      <button type="submit" class="submit-btn">Send enquiry</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="brand">Harrington <span>Data Co</span></span>
+    <span class="links">
+      <a href="index.html">Home</a>
+      <a href="data-services.html">Data services</a>
+      <a href="ai-services.html">AI services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </span>
+    <span class="copyright">© 2026 Harrington Data Co</span>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/contact.js"></script>
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/247125978.js"></script>
+</body>
+</html>
