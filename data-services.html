@@ -15,39 +15,44 @@
 
 <nav class="site-nav">
   <a href="index.html" class="brand">Harrington <span>Data Co</span></a>
-  <a href="index.html" class="nav-link">Home</a>
-  <div class="nav-dropdown">
-    <button type="button" class="nav-trigger current" aria-expanded="false" aria-controls="nav-services-menu">
-      Services
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-    </button>
-    <div id="nav-services-menu" class="nav-menu" hidden>
-      <a href="data-services.html" aria-current="page">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
-        <span>
-          <span class="item-title">Data services</span>
-          <span class="item-desc">Engineering, reporting, analytics</span>
-        </span>
-      </a>
-      <a href="ai-services.html">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
-        <span>
-          <span class="item-title">AI services</span>
-          <span class="item-desc">Train, strategize, build</span>
-        </span>
-      </a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  </button>
+  <div class="nav-panel" id="nav-panel">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-dropdown">
+      <button type="button" class="nav-trigger current" aria-expanded="false" aria-controls="nav-services-menu">
+        Services
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+      <div id="nav-services-menu" class="nav-menu" hidden>
+        <a href="data-services.html" aria-current="page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+          <span>
+            <span class="item-title">Data services</span>
+            <span class="item-desc">Engineering, reporting, analytics</span>
+          </span>
+        </a>
+        <a href="ai-services.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+          <span>
+            <span class="item-title">AI services</span>
+            <span class="item-desc">Train, strategize, build</span>
+          </span>
+        </a>
+      </div>
     </div>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contact.html" class="nav-cta">Get in touch</a>
   </div>
-  <a href="faq.html" class="nav-link">FAQ</a>
-  <a href="contact.html" class="nav-cta">Get in touch</a>
 </nav>
 
 <main class="wrap">
 
   <section class="section-hero-tight">
     <span class="eyebrow" style="margin-bottom:16px;">Data services</span>
-    <h1 class="display-md" style="margin:0 0 20px; max-width:22ch;">Numbers that add up, and the plumbing behind them.</h1>
-    <p class="lede" style="max-width:62ch; margin:0 0 28px;">This is what we started out doing. Three kinds of work, each one starting from something we hear on nearly every first call.</p>
+    <h1 class="display-md" style="margin:0 0 28px; max-width:22ch;">Data people <span style="position:relative; display:inline-block;"><span style="position:relative; z-index:1;">trust</span><svg class="underline-swipe" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true" style="position:absolute; left:-4%; bottom:-0.01em; width:108%; height:0.2em; z-index:0;"><path d="M4 8 C54 3 140 11 196 5" fill="none" stroke="rgba(31,111,92,0.34)" stroke-width="7" stroke-linecap="round"></path></svg></span>.</h1>
     <div class="jump-links">
       <a href="#engineering" class="btn-outline-pill">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
@@ -63,18 +68,17 @@
       </a>
     </div>
     <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
-      <a href="contact.html" class="btn btn-primary">Get in touch</a>
-      <span class="cross-link">Looking for the AI side? <a href="ai-services.html">See AI services</a>.</span>
+      <a href="contact.html?practice=data" class="btn btn-primary">Get in touch</a>
+      <span class="cross-link">Working on AI too? <a href="ai-services.html">See AI services</a>.</span>
     </div>
   </section>
 
-  <section id="engineering" class="section-tight">
+  <section id="engineering" class="section-tight section-divider">
     <span class="eyebrow eyebrow-icon">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
       Data engineering
     </span>
-    <h2 class="headline-sm" style="margin:0 0 10px;">Getting your data into one place, correctly</h2>
-    <p class="sub" style="max-width:62ch; margin:0 0 32px;">Unglamorous work. Everything else on this site depends on it.</p>
+    <h2 class="headline-sm" style="margin:0 0 32px;">Getting your data into one place, correctly</h2>
     <div class="grid-3 wide">
       <div class="service-card">
         <div class="question"><p>“Our numbers don’t match between systems.”</p></div>
@@ -82,7 +86,7 @@
           <h3>Pipelines &amp; integration</h3>
           <p class="desc">We join up the systems you already run, so a figure means the same thing everywhere it appears and it updates without anyone exporting a file first.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Scope a pipeline →</a>
+            <a href="contact.html?practice=data&amp;work=engineering&amp;from=pipelines-integration" class="cta">Scope a pipeline →</a>
           </div>
         </div>
       </div>
@@ -92,7 +96,7 @@
           <h3>Warehouse setup</h3>
           <p class="desc">One place the data lands and stays, set up so reports read from it directly instead of from a file on someone’s desktop.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Talk about a warehouse →</a>
+            <a href="contact.html?practice=data&amp;work=engineering&amp;from=warehouse-setup" class="cta">Talk about a warehouse →</a>
           </div>
         </div>
       </div>
@@ -102,20 +106,19 @@
           <h3>Cleanup &amp; quality</h3>
           <p class="desc">We go looking for the duplicates, the gaps and the field nobody has filled in since 2019. We fix what can be fixed, then add checks so it stays fixed.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Request a data review →</a>
+            <a href="contact.html?practice=data&amp;work=engineering&amp;from=cleanup-quality" class="cta">Request a data review →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="reporting" class="section-tight">
+  <section id="reporting" class="section-tight section-divider">
     <span class="eyebrow eyebrow-icon">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
       Reporting &amp; dashboards
     </span>
-    <h2 class="headline-sm" style="margin:0 0 10px;">Reports people actually open</h2>
-    <p class="sub" style="max-width:62ch; margin:0 0 32px;">Built around the decisions you make each week, not around every field we could find.</p>
+    <h2 class="headline-sm" style="margin:0 0 32px;">Reports people actually open</h2>
     <div class="grid-3 wide">
       <div class="service-card">
         <div class="question"><p>“Nobody trusts the numbers in this report.”</p></div>
@@ -123,7 +126,7 @@
           <h3>Reporting rebuild</h3>
           <p class="desc">We trace every figure back to where it came from, write the definitions down with you, then rebuild the report so the same question gives the same answer twice.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Rebuild a report →</a>
+            <a href="contact.html?practice=data&amp;work=reporting&amp;from=reporting-rebuild" class="cta">Rebuild a report →</a>
           </div>
         </div>
       </div>
@@ -133,7 +136,7 @@
           <h3>Dashboard design</h3>
           <p class="desc">Usually a design problem rather than a data one. We find out what each person decides each week and build the view around that, in the tool you already pay for.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Scope a dashboard →</a>
+            <a href="contact.html?practice=data&amp;work=reporting&amp;from=dashboard-design" class="cta">Scope a dashboard →</a>
           </div>
         </div>
       </div>
@@ -143,20 +146,19 @@
           <h3>Board &amp; exec reporting</h3>
           <p class="desc">A pack that builds itself: same figures, same format, ready on the date you need it, with the commentary left for you to write.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Automate a board pack →</a>
+            <a href="contact.html?practice=data&amp;work=reporting&amp;from=board-reporting" class="cta">Automate a board pack →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="analytics" class="section-tight">
+  <section id="analytics" class="section-tight section-divider">
     <span class="eyebrow eyebrow-icon">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
       Advanced analytics
     </span>
-    <h2 class="headline-sm" style="margin:0 0 10px;">Answering the questions a dashboard can't</h2>
-    <p class="sub" style="max-width:62ch; margin:0 0 32px;">We show our working, and we tell you how confident we are.</p>
+    <h2 class="headline-sm" style="margin:0 0 32px;">Answering the questions a dashboard can't</h2>
     <div class="grid-3 wide">
       <div class="service-card">
         <div class="question"><p>“Which of our customers are about to leave?”</p></div>
@@ -164,7 +166,7 @@
           <h3>Predictive models</h3>
           <p class="desc">We build and test a model on your own history, then tell you how often it’s right and where you shouldn’t lean on it.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Discuss a model →</a>
+            <a href="contact.html?practice=data&amp;work=analytics&amp;from=predictive-models" class="cta">Discuss a model →</a>
           </div>
         </div>
       </div>
@@ -174,18 +176,17 @@
           <h3>Forecasting</h3>
           <p class="desc">Demand, revenue, staffing or stock, forecast from your own numbers. You get a range, not one confident-looking figure.</p>
           <div class="basis-block">
-            <a href="contact.html" class="cta">Scope a forecast →</a>
+            <a href="contact.html?practice=data&amp;work=analytics&amp;from=forecasting" class="cta">Scope a forecast →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-cta">
+  <section class="section-cta section-divider">
     <div class="cta-banner">
       <div>
-        <h2 style="max-width:26ch;">Most AI projects fail on the data, not the model.</h2>
-        <p style="max-width:58ch;">If you came here for the AI work, this page is the reason it'll hold up. We'll do either side on its own, and we'll tell you which one your problem really is.</p>
+        <h2>Most AI projects fail on the data, not the model.</h2>
       </div>
       <a href="ai-services.html" class="btn btn-primary" style="white-space:nowrap;">See AI services</a>
     </div>
@@ -200,6 +201,7 @@
       <a href="index.html">Home</a>
       <a href="data-services.html">Data services</a>
       <a href="ai-services.html">AI services</a>
+      <a href="about.html">About</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </span>

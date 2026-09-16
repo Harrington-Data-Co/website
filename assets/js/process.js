@@ -5,11 +5,11 @@
   // click-to-jump behavior and keeps the fill bar / detail panel in sync.
 
   var STAGES = [
-    { num: '01', stage: 'Conversation', duration: '45 minutes', summary: "A call with the people who'd use the work. We ask how you work now, where the hours go, and what you've already tried.", output: "You'll know whether we can help. Sometimes the answer is no." },
-    { num: '02', stage: 'A scoped proposal', duration: 'Within a week', summary: "We write up what we'd do, what it costs and how long it takes. Nothing starts until you say yes.", output: 'A proposal in writing, thoughtful about your needs.' },
-    { num: '03', stage: 'Audit or assessment', duration: 'A few weeks', summary: 'We sit with your team and go through the systems, the reports and the workarounds. We write up what we found, in language you can forward to anyone.', output: 'A written report that strategically tells you what\'s next.' },
-    { num: '04', stage: 'The work itself', duration: 'Scoped upfront', summary: 'Fixed cost, fixed dates, agreed before we start. You see it as it lands rather than in one reveal at the end.', output: 'Pipelines and reports built, sessions run, or systems handed over.' },
-    { num: '05', stage: 'Support', duration: 'Monthly', summary: 'Shifting from an initial build to a long-term relationship. Upkeep, refresher sessions, and changes as the business changes.', output: 'Upkeep, refreshers, and whatever comes next.' },
+    { num: '01', stage: 'Conversation', duration: '45 minutes', summary: "A call with the people who'd use the work. We ask how you work now, where the hours go, and what you've already tried.", output: "We decide whether working together is a good fit." },
+    { num: '02', stage: 'A scoped proposal', duration: 'Within a week', summary: "We write up what we'd do, what it costs and how long it takes. Just as importantly, you understand the level of effort required of your team to make the work happen.", output: 'A clear proposal outlining your costs and the commitment we need from your team.' },
+    { num: '03', stage: 'Audit or assessment', duration: 'A few weeks', summary: 'We sit with your team and go through the processes, the reports, and your systems. We write up our findings in accessible language.', output: 'The opportunities in front of you and a roadmap for how to address them.' },
+    { num: '04', stage: 'Implementation', duration: 'Fit to the project', summary: 'Staged development of the solution that your team needs. You get a clear picture of the work during check-ins along the way.', output: 'Agents, Knowledge Bases, Pipelines, Analysis - whatever we agreed to.' },
+    { num: '05', stage: 'Support', duration: 'Monthly', summary: 'We build ongoing relationships with our partners to help with education, maintenance, or additional build out.', output: 'Tools and services that work for you everyday, without fail.' },
   ];
 
   var rail = document.getElementById('rail');
@@ -22,6 +22,11 @@
   var summaryEl = document.getElementById('rail-stage-summary');
   var outputEl = document.getElementById('rail-stage-output');
   var nextBtn = document.getElementById('rail-next');
+  var contactCta = document.getElementById('rail-contact-cta');
+  var mobileDot = document.getElementById('rail-mobile-dot');
+  var mobileStep = document.getElementById('rail-mobile-step');
+  var mobilePrev = document.getElementById('rail-prev');
+  var mobileNext = document.getElementById('rail-mobile-next');
   var active = 0;
   var last = STAGES.length - 1;
 
@@ -42,9 +47,16 @@
     if (active < last) {
       nextBtn.hidden = false;
       nextBtn.textContent = 'Next: ' + STAGES[active + 1].stage + ' →';
+      contactCta.hidden = true;
     } else {
       nextBtn.hidden = true;
+      contactCta.hidden = false;
     }
+
+    mobileDot.textContent = s.num;
+    mobileStep.textContent = 'Step ' + (active + 1) + ' of ' + STAGES.length;
+    mobilePrev.disabled = active === 0;
+    mobileNext.disabled = active === last;
   }
 
   buttons.forEach(function (btn, i) {
@@ -62,6 +74,20 @@
       }
     });
   }
+
+  mobilePrev.addEventListener('click', function () {
+    if (active > 0) {
+      active -= 1;
+      render();
+    }
+  });
+
+  mobileNext.addEventListener('click', function () {
+    if (active < last) {
+      active += 1;
+      render();
+    }
+  });
 
   render();
 })();

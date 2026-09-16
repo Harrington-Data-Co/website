@@ -1,4 +1,39 @@
 (function () {
+  // --- Mobile nav toggle ---------------------------------------------------
+  // Below the nav breakpoint, links collapse into a panel behind a
+  // hamburger button. Closes on Escape, outside click, or navigating away.
+
+  var navToggle = document.getElementById('nav-toggle');
+  var navPanel = document.getElementById('nav-panel');
+
+  if (navToggle && navPanel) {
+    function setNavOpen(open) {
+      navPanel.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    navToggle.addEventListener('click', function () {
+      setNavOpen(!navPanel.classList.contains('is-open'));
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!navPanel.contains(e.target) && e.target !== navToggle && !navToggle.contains(e.target)) {
+        setNavOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navPanel.classList.contains('is-open')) {
+        setNavOpen(false);
+        navToggle.focus();
+      }
+    });
+
+    navPanel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setNavOpen(false); });
+    });
+  }
+
   // --- Services dropdown --------------------------------------------------
   // Opens on hover for mouse users, on click/tap for everyone, and closes on
   // Escape, on an outside click, or when focus moves out of the dropdown.
