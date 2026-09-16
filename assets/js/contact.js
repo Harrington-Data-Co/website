@@ -34,6 +34,7 @@
   var practice = '';
   var dataWork = [];
   var aiInterests = [];
+  var ctaFrom = '';
 
   function hasData(label) { return dataWork.indexOf(label) !== -1; }
   function hasAi(label) { return aiInterests.indexOf(label) !== -1; }
@@ -169,6 +170,7 @@
 
   function buildMessage() {
     var lines = [];
+    if (ctaFrom) lines.push('Started from: ' + ctaFrom);
     if (practice) lines.push('Which side: ' + practice);
 
     var showData = practice === 'Data' || practice === 'Both';
@@ -214,7 +216,7 @@
   function setLoading(isLoading) {
     if (!submitBtn) return;
     submitBtn.disabled = isLoading;
-    submitBtn.textContent = isLoading ? 'Sending…' : 'Send enquiry';
+    submitBtn.textContent = isLoading ? 'Sending…' : 'Send';
   }
 
   if (form) {
@@ -255,6 +257,52 @@
         });
     });
   }
+
+  // --- Pre-fill from a service-page CTA's query string --------------------
+  // Every value is looked up in a fixed whitelist rather than used as-is, so
+  // an arbitrary query string can't inject text into the submitted message.
+
+  var CTA_PRACTICE = { data: 'Data', ai: 'AI', both: 'Both', unsure: 'Not sure yet' };
+  var CTA_WORK = { engineering: 'Data engineering', reporting: 'Reporting & dashboards', analytics: 'Advanced analytics' };
+  var CTA_INTEREST = { train: 'Train', strategize: 'Strategize', build: 'Build' };
+  var CTA_BUILD_KIND = { agent: 'An agent that handles a task', kb: 'A knowledge base the team can ask' };
+  var CTA_FROM = {
+    'pipelines-integration': 'Pipelines & integration',
+    'warehouse-setup': 'Warehouse setup',
+    'cleanup-quality': 'Cleanup & quality',
+    'reporting-rebuild': 'Reporting rebuild',
+    'dashboard-design': 'Dashboard design',
+    'board-reporting': 'Board & exec reporting',
+    'predictive-models': 'Predictive models',
+    'forecasting': 'Forecasting',
+    'team-workshops': 'Team workshops',
+    'ongoing-training': 'Ongoing training',
+    'role-tracks': 'Role-specific tracks',
+    'readiness-audit': 'Readiness audit',
+    'opportunity-assessment': 'Opportunity assessment',
+    'leadership-advisory': 'Leadership advisory',
+    'agents': 'Agents',
+    'knowledge-bases': 'Knowledge bases',
+    'support-maintenance': 'Support & maintenance',
+  };
+
+  (function applyCtaParams() {
+    var params = new URLSearchParams(window.location.search);
+    var practiceValue = CTA_PRACTICE[params.get('practice')];
+    var workValue = CTA_WORK[params.get('work')];
+    var interestValue = CTA_INTEREST[params.get('interest')];
+    var buildValue = CTA_BUILD_KIND[params.get('build')];
+    var fromValue = CTA_FROM[params.get('from')];
+
+    if (fromValue) ctaFrom = fromValue;
+    if (practiceValue) pickPractice(practiceValue);
+    if (workValue) toggleData(workValue);
+    if (interestValue) toggleAi(interestValue);
+    if (buildValue && buKind) {
+      buKind.value = buildValue;
+      syncBuildKind();
+    }
+  })();
 
   render();
 })();

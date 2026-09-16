@@ -15,92 +15,64 @@
 
 <nav class="site-nav">
   <a href="index.html" class="brand">Harrington <span>Data Co</span></a>
-  <a href="index.html" class="nav-link current">Home</a>
-  <div class="nav-dropdown">
-    <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-services-menu">
-      Services
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
-    </button>
-    <div id="nav-services-menu" class="nav-menu" hidden>
-      <a href="data-services.html">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
-        <span>
-          <span class="item-title">Data services</span>
-          <span class="item-desc">Engineering, reporting, analytics</span>
-        </span>
-      </a>
-      <a href="ai-services.html">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
-        <span>
-          <span class="item-title">AI services</span>
-          <span class="item-desc">Train, strategize, build</span>
-        </span>
-      </a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  </button>
+  <div class="nav-panel" id="nav-panel">
+    <a href="index.html" class="nav-link current">Home</a>
+    <div class="nav-dropdown">
+      <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-services-menu">
+        Services
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+      <div id="nav-services-menu" class="nav-menu" hidden>
+        <a href="data-services.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+          <span>
+            <span class="item-title">Data services</span>
+            <span class="item-desc">Engineering, reporting, analytics</span>
+          </span>
+        </a>
+        <a href="ai-services.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+          <span>
+            <span class="item-title">AI services</span>
+            <span class="item-desc">Train, strategize, build</span>
+          </span>
+        </a>
+      </div>
     </div>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contact.html" class="nav-cta">Get in touch</a>
   </div>
-  <a href="faq.html" class="nav-link">FAQ</a>
-  <a href="contact.html" class="nav-cta">Get in touch</a>
 </nav>
 
 <main class="wrap">
 
-  <section class="section-hero home-hero">
-    <div>
-      <span class="badge-pill" style="margin-bottom:24px;">For teams without a data department</span>
-      <h1 class="display" style="margin:0 0 24px;">Your AI is only as good as your data. We help you with both.</h1>
-      <p class="lede" style="max-width:52ch; margin:0 0 32px;">We do two kinds of work. One is data: pipelines, reporting, analysis. The other is AI: training your team, deciding what's worth doing, building the thing itself. Most people come to us about the second and find they need some of the first.</p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn-primary">Get in touch</a>
-        <a href="#practices" class="btn btn-secondary">See the services</a>
-      </div>
-    </div>
-    <div class="schematic-card">
-      <div class="head">
-        <span class="label">What the work looks like</span>
-        <span class="tag">Schematic</span>
-      </div>
-      <div class="schematic-sources">
-        <div class="source"><span class="source-label">Accounting</span><span class="dot"></span></div>
-        <div class="source"><span class="source-label">CRM</span><span class="dot"></span></div>
-        <div class="source"><span class="source-label">Website analytics</span><span class="dot"></span></div>
-        <div class="source"><span class="source-label">Email &amp; forms</span><span class="dot"></span></div>
-      </div>
-      <svg class="flow" viewBox="0 0 400 52" preserveAspectRatio="none" width="100%" height="52" fill="none" stroke="rgba(27,42,65,0.28)" stroke-width="1.2" aria-hidden="true" style="display:block;">
-        <path d="M50 0 C50 34 200 16 200 52" stroke-dasharray="3 6"></path>
-        <path d="M150 0 C150 34 200 16 200 52" stroke-dasharray="3 6" style="animation-delay:0.22s;"></path>
-        <path d="M250 0 C250 34 200 16 200 52" stroke-dasharray="3 6" style="animation-delay:0.44s;"></path>
-        <path d="M350 0 C350 34 200 16 200 52" stroke-dasharray="3 6" style="animation-delay:0.66s;"></path>
-      </svg>
-      <div class="schematic-hub">
-        <div class="title">One place the numbers live</div>
-        <div class="desc">One set of definitions, written down. Ask the same question twice, get the same answer.</div>
-      </div>
-      <svg class="flow" viewBox="0 0 400 52" preserveAspectRatio="none" width="100%" height="52" fill="none" stroke="rgba(31,111,92,0.5)" stroke-width="1.2" aria-hidden="true" style="display:block;">
-        <path d="M200 0 C200 36 100 16 100 52" stroke-dasharray="3 6"></path>
-        <path d="M200 0 C200 36 300 16 300 52" stroke-dasharray="3 6" style="animation-delay:0.3s;"></path>
-      </svg>
-      <div class="schematic-outcomes">
-        <div class="outcome"><span class="sq"></span><span class="text">Data people trust</span></div>
-        <div class="outcome"><span class="sq"></span><span class="text">AI grounded in reality</span></div>
-      </div>
+  <section class="section-hero" style="max-width:940px;">
+    <h1 class="display" style="font-size:clamp(42px,6.9vw,86px); margin:0 0 20px;">Your <span style="position:relative; display:inline-block;"><span style="position:relative; z-index:1;">AI</span><svg class="underline-swipe" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true" style="position:absolute; left:-5%; bottom:-0.01em; width:110%; height:0.2em; z-index:0;"><path d="M4 7 C52 2 138 11 196 5" fill="none" stroke="rgba(31,111,92,0.34)" stroke-width="7" stroke-linecap="round"></path></svg></span> is only as good as your <span style="position:relative; display:inline-block;"><span style="position:relative; z-index:1;">data</span><svg class="underline-swipe" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true" style="position:absolute; left:-4%; bottom:-0.02em; width:108%; height:0.22em; z-index:0;"><path d="M4 9 C46 4 128 3 196 7" fill="none" stroke="rgba(31,111,92,0.34)" stroke-width="7" stroke-linecap="round"></path></svg></span>.</h1>
+    <p class="hero-tagline">We help you with both.</p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
     </div>
   </section>
 
   <section id="practices" class="section">
-    <span class="eyebrow">Two practices</span>
-    <h2 class="headline" style="margin:0 0 12px; max-width:22ch;">Start with whichever one hurts more.</h2>
+    <span class="eyebrow">What we do</span>
+    <h2 class="headline" style="margin:0 0 12px; max-width:22ch;">Start where it hurts.</h2>
     <div class="practices-grid">
       <div class="practice-card">
         <span class="eyebrow eyebrow-icon" style="margin-bottom:18px;">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
           Data services
         </span>
-        <h3>Numbers that add up, and the plumbing behind them</h3>
-        <p>Joining up the systems you already run, rebuilding the reports people quietly stopped trusting, and answering the questions a dashboard can't.</p>
+        <h3>Data people trust</h3>
+        <p>Joining up the systems you run so the numbers agree, rebuilding the reports people stopped trusting, and answering the questions a dashboard can't.</p>
         <div class="dash-list">
-          <div class="item"><span class="dash">—</span><span class="text">Data engineering and pipelines</span></div>
-          <div class="item"><span class="dash">—</span><span class="text">Reporting and dashboards</span></div>
-          <div class="item"><span class="dash">—</span><span class="text">Advanced analytics and modelling</span></div>
+          <div class="item"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg></span><span class="text">Data engineering and pipelines</span></div>
+          <div class="item"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg></span><span class="text">Reporting and dashboards</span></div>
+          <div class="item"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></span><span class="text">Advanced analytics and modelling</span></div>
         </div>
         <a href="data-services.html">See data services →</a>
       </div>
@@ -109,14 +81,58 @@
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
           AI services
         </span>
-        <h3>Real work out of the AI tools you already pay for</h3>
-        <p>Workshops on Claude, ChatGPT, Copilot and Gemini. Help working out what's worth doing next. Building the agents and knowledge bases to supercharge your business.</p>
+        <h3>AI grounded in reality</h3>
+        <p>Training your team on the tools they use, working out which problems are actually worth pointing AI at, and building the thing when building is the right answer.</p>
         <div class="dash-list">
-          <div class="item"><span class="dash">—</span><span class="text">Train — workshops and coaching</span></div>
-          <div class="item"><span class="dash">—</span><span class="text">Strategize — audits and advisory</span></div>
-          <div class="item"><span class="dash">—</span><span class="text">Build — agents and knowledge bases</span></div>
+          <div class="item"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg></span><span class="text">Train — workshops and coaching</span></div>
+          <div class="item"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></span><span class="text">Strategize — audits and advisory</span></div>
+          <div class="item"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></span><span class="text">Build — agents and knowledge bases</span></div>
         </div>
         <a href="ai-services.html">See AI services →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">What the work looks like</span>
+    <h2 class="headline" style="margin:0 0 12px; max-width:28ch;">Everything runs off the same numbers.</h2>
+    <p class="sub" style="max-width:62ch; margin:0 0 32px;">Your systems go in. Numbers everyone agrees on come out. Click a stage to see what happens there.</p>
+    <div class="flow-card">
+      <div class="flow-row" id="flow-row">
+        <button type="button" class="flow-btn" data-zone="0" aria-pressed="false">
+          <span class="flow-label">Wherever your numbers live</span>
+          <span class="flow-source"><span class="dot"></span>Accounting</span>
+          <span class="flow-source"><span class="dot"></span>Sales and CRM</span>
+          <span class="flow-source"><span class="dot"></span>Website and marketing</span>
+          <span class="flow-source"><span class="dot"></span>Spreadsheets and exports</span>
+          <span class="flow-source muted"><span class="dot dashed"></span>whatever else you use</span>
+        </button>
+        <svg class="flow-connector flow" viewBox="0 0 60 120" preserveAspectRatio="none" width="60" height="120" fill="none" stroke="rgba(27,42,65,0.28)" stroke-width="1.2" aria-hidden="true">
+          <path d="M0 12 C36 12 24 60 60 60" stroke-dasharray="3 6"></path>
+          <path d="M0 44 C36 44 30 60 60 60" stroke-dasharray="3 6" style="animation-delay:0.22s;"></path>
+          <path d="M0 76 C36 76 30 60 60 60" stroke-dasharray="3 6" style="animation-delay:0.44s;"></path>
+          <path d="M0 108 C36 108 24 60 60 60" stroke-dasharray="3 6" style="animation-delay:0.66s;"></path>
+        </svg>
+        <span class="flow-connector-mobile" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></span>
+        <button type="button" class="flow-btn flow-hub" data-zone="1" aria-pressed="true">
+          <span class="title">Numbers everyone agrees on</span>
+          <span class="desc">Agreed once, written down, and used by every report and every tool after it.</span>
+        </button>
+        <svg class="flow-connector flow" viewBox="0 0 60 120" preserveAspectRatio="none" width="60" height="120" fill="none" stroke="rgba(31,111,92,0.5)" stroke-width="1.2" aria-hidden="true">
+          <path d="M0 60 C36 60 24 30 60 30" stroke-dasharray="3 6"></path>
+          <path d="M0 60 C36 60 24 90 60 90" stroke-dasharray="3 6" style="animation-delay:0.3s;"></path>
+        </svg>
+        <span class="flow-connector-mobile" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></span>
+        <button type="button" class="flow-btn" data-zone="2" aria-pressed="false">
+          <span class="flow-label">What you end up with</span>
+          <span class="flow-outcome"><span class="sq"></span><span class="text">Data people trust</span></span>
+          <span class="flow-outcome"><span class="sq"></span><span class="text">AI grounded in reality</span></span>
+        </button>
+      </div>
+      <div class="flow-detail">
+        <span class="stage" id="flow-stage">Stage 2 of 3</span>
+        <h3 id="flow-title">Numbers everyone agrees on</h3>
+        <p id="flow-body">We join those systems up and write down what each number actually means — what counts as a customer, when revenue lands, which date wins when two disagree. That written-down version becomes the thing every report and every AI tool reads from.</p>
       </div>
     </div>
   </section>
@@ -126,6 +142,18 @@
     <h2 class="headline" style="margin:0 0 36px; max-width:20ch;">What it's like to work with us.</h2>
     <div class="rail-card">
       <div class="rail-inner">
+        <div class="rail-mobile-nav">
+          <button type="button" class="rail-mobile-btn" id="rail-prev" aria-label="Previous stage">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+          </button>
+          <div class="rail-mobile-indicator">
+            <span class="rail-dot" id="rail-mobile-dot">01</span>
+            <span class="step" id="rail-mobile-step">Step 1 of 5</span>
+          </div>
+          <button type="button" class="rail-mobile-btn" id="rail-mobile-next" aria-label="Next stage">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+        </div>
         <div class="rail-track-wrap">
           <div class="rail-track"><div class="fill" id="rail-fill" style="width:0%"></div></div>
           <div class="rail" id="rail">
@@ -139,11 +167,11 @@
             </button>
             <button type="button" class="rail-stage" aria-pressed="false">
               <span class="rail-dot">03</span>
-              <span><span class="rail-name">Audit or assessment</span><span class="rail-duration">2–3 weeks</span></span>
+              <span><span class="rail-name">Audit or assessment</span><span class="rail-duration">A few weeks</span></span>
             </button>
             <button type="button" class="rail-stage" aria-pressed="false">
               <span class="rail-dot">04</span>
-              <span><span class="rail-name">The work itself</span><span class="rail-duration">Scoped upfront</span></span>
+              <span><span class="rail-name">Fit to the project</span><span class="rail-duration">Scoped upfront</span></span>
             </button>
             <button type="button" class="rail-stage" aria-pressed="false">
               <span class="rail-dot">05</span>
@@ -161,6 +189,7 @@
             <span class="label">What you have at the end</span>
             <p class="value" id="rail-stage-output">You'll know whether we can help. Sometimes the answer is no.</p>
             <button type="button" class="rail-next" id="rail-next">Next: A scoped proposal →</button>
+            <a href="contact.html" class="rail-next" id="rail-contact-cta" hidden>Talk through your scope →</a>
           </div>
         </div>
       </div>
@@ -173,8 +202,8 @@
     <h2 class="headline" style="margin:0 0 36px; max-width:24ch;">Built for businesses without a data department.</h2>
     <div class="grid-3 tight">
       <div class="diff-card">
-        <h3>Fixed scope, stated upfront</h3>
-        <p>Cost and timeline before we start. If a monthly arrangement makes sense later, we'll bring it up then.</p>
+        <h3>We start with what's broken</h3>
+        <p>No platform migration before we understand the problem you came with. The fix is often smaller than the thing you were about to buy.</p>
       </div>
       <div class="diff-card">
         <h3>No vendor lock-in</h3>
@@ -191,7 +220,6 @@
     <div class="cta-banner">
       <div>
         <h2 style="max-width:22ch;">Tell us where your team is stuck.</h2>
-        <p style="max-width:52ch;">Send a short note. We reply within two business days, and we'll be straight about whether we're the right fit.</p>
       </div>
       <a href="contact.html" class="btn btn-primary" style="white-space:nowrap;">Get in touch</a>
     </div>
@@ -206,6 +234,7 @@
       <a href="index.html">Home</a>
       <a href="data-services.html">Data services</a>
       <a href="ai-services.html">AI services</a>
+      <a href="about.html">About</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </span>
@@ -214,6 +243,7 @@
 </footer>
 
 <script src="assets/js/nav.js"></script>
+<script src="assets/js/zones.js"></script>
 <script src="assets/js/process.js"></script>
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/247125978.js"></script>
 </body>
