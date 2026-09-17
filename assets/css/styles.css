@@ -45,7 +45,10 @@
    the cascade — so any element toggled via the hidden property needs this. */
 [hidden] { display: none !important; }
 
-html { color-scheme: light; }
+html { color-scheme: light; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 
 body {
   margin: 0;
