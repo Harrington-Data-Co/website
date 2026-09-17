@@ -36,6 +36,8 @@
 
   --container-wide: 1180px;
   --container-narrow: 880px;
+
+  --color-bg-nav-scrolled: #DDE4DD;
 }
 
 * { box-sizing: border-box; }
@@ -319,6 +321,18 @@ h2.headline-sm {
 /* Nav */
 
 .site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--color-bg);
+  transition: background-color 220ms ease, box-shadow 220ms ease;
+}
+body.is-scrolled .site-nav {
+  background: var(--color-bg-nav-scrolled);
+  box-shadow: var(--shadow-xs), var(--shadow-sm);
+}
+
+.nav-inner {
   position: relative;
   display: flex;
   align-items: center;
