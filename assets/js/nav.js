@@ -1,4 +1,23 @@
 (function () {
+  // --- Sticky header: darker background once scrolled ----------------------
+
+  var SCROLL_THRESHOLD = 8;
+  var ticking = false;
+
+  function updateScrolledState() {
+    document.body.classList.toggle('is-scrolled', window.scrollY > SCROLL_THRESHOLD);
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(updateScrolledState);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateScrolledState();
+
   // --- Mobile nav toggle ---------------------------------------------------
   // Below the nav breakpoint, links collapse into a panel behind a
   // hamburger button. Closes on Escape, outside click, or navigating away.
